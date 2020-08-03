@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td {
+      border: 1px solid #280400;
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: cornflowerblue;
+      border: 1px solid #000000;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #d5e1ee;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<div *ngIf="customer">
+  <h1>Orders for {{ customer.name | capitalize }}</h1>
+
+  <table *ngFor="let order of orders">
+    <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Price</th>
+    </tr>
+    </thead>
+
+    <tr *ngFor="let orderItem of order.orderItems">
+      <td>{{ orderItem.productName }}</td>
+      <td>{{ orderItem.itemCost | currency:'USD':'symbol' }}</td>
+    </tr>
+  </table>
+</div>
+<div *ngIf="!customer">
+  No customer found
+</div>
+<br />
+<a routerLink="/customers">View All Customers</a>
+
+</body>
+</html>

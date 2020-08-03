@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "name": "Muhammad Usman",
+    "city": " Islamabad",
+    "orderTotal": 40.99
+  },
+  {
+    "id": 2,
+    "name": "Imran Haider",
+    "city": "Bhaker",
+    "orderTotal": 89.99
+  },
+  {
+    "id": 3,
+    "name": "Waqas Younas",
+    "city": "Dubai",
+    "orderTotal": 29.99
+  },
+  {
+    "id": 4,
+    "name": "Najam ul Saqib",
+    "city": "Sialkot",
+    "orderTotal": 15.99
+  },
+  {
+    "id" : 5,
+    "name" : "Rasheed Kareem",
+    "city" : "Bhaker",
+    "orderTotal" : 1000.99
+  },
+  {
+    "id" : 6,
+    "name" : "Nouman Javed",
+    "city" : "Islamabad",
+    "orderTotal" : 68.99
+  },
+  {
+    "id" : 7,
+    "name" : "Waheed Murad",
+    "city" : "Karachi",
+    "orderTotal" : 70.99
+  },
+  {
+    "id" : 8,
+    "name" : "Muhammad Ahmed",
+    "city" : "Rangli",
+    "orderTotal" : 15.99
+  },
+  {
+    "id" : 9,
+    "name" : "Ahmed Javed",
+    "city" : "Fasalabad",
+    "orderTotal" : 25.99
+  },
+  {
+    "id" : 10,
+    "name" : "Afnan Haider",
+    "city" : "Haiderabad",
+    "orderTotal" : 35.99
+  }
+
+]

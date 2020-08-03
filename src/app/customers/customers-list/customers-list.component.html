@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td {
+      border: 1px solid #280400;
+      text-align: left;
+      padding: 8px;
+    }
+    th {
+      background-color: cornflowerblue;
+      border: 1px solid #000000;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #d5e1ee;
+    }
+  </style>
+</head>
+<body>
+
+<filter-textbox (changed)="filter($event)"></filter-textbox>
+<br />
+<br />
+<table>
+  <thead>
+  <tr>
+    <th (click)="sort('name')">Name</th>
+    <th (click)="sort('city')">City</th>
+    <th (click)="sort('orderTotal')">Order Total</th>
+  </tr>
+  </thead>
+  <tr *ngFor="let cust of filteredCustomers">
+    <td>
+      <a [routerLink]="['/orders', cust.id]">
+        {{ cust.name | capitalize }}
+      </a>
+    </td>
+    <td>{{ cust.city }}</td>
+    <td>{{ cust.orderTotal | currency:currencyCode }}</td>
+  </tr>
+  <tr *ngIf="filteredCustomers && filteredCustomers.length">
+    <td colspan="2">&nbsp;</td>
+    <td>
+      {{ customersOrderTotal | currency:currencyCode }}
+    </td>
+  </tr>
+  <tr *ngIf="!filteredCustomers || !filteredCustomers.length">
+    <td colspan="4">No customers found</td>
+  </tr>
+</table>
+<br />
+<br />
+Number of Customers: {{ filteredCustomers.length }}
+
+</body>
+</html>
